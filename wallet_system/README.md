@@ -38,3 +38,29 @@ A simple Java-based Digital Wallet System that allows users to create accounts, 
 - Custom exceptions (e.g., `InsufficientFundsException`)
 
 ---
+##  Class Structure
+
+###  `Transaction` Class  
+Represents a single transaction such as a deposit or a payment.
+
+| Field / Method | Description |
+|----------------|-------------|
+| `type`         | The type of transaction (`"Deposit"` or `"Payment"`). |
+| `amount`       | The amount involved in the transaction. |
+| `date`         | The date and time when the transaction occurred. |
+| `Transaction(String type, double amount)` | Constructor that initializes the transaction with type, amount, and current timestamp. |
+| `toString()`   | Returns a human-readable string of the transaction, like `"Deposit: $100.0 on 2025-04-08"`. |
+
+---
+
+###  `Wallet` Class  
+Manages the user's wallet operations and transaction history.
+
+| Field / Method | Description |
+|----------------|-------------|
+| `balance`                | Stores the current balance in the wallet. |
+| `transactions`           | A list that stores all transaction records. |
+| `addFunds(double amount)`| Adds a specified amount to the wallet and logs a `"Deposit"` transaction. |
+| `makePayment(double amount)` | Deducts a specified amount from the wallet if funds are sufficient and logs a `"Payment"` transaction. |
+| `getBalance()`           | Returns the current wallet balance. |
+| `printTransactionHistory()` | Displays the list of all transactions in chronological order. |
