@@ -1,4 +1,4 @@
-package wallet_sytem;
+package wallet_system;
 // package wallet_system;
 import java.util.*;
 
