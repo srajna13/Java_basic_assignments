@@ -1,9 +1,7 @@
 package wallet_system;
-// package wallet_system;
 import java.util.*;
 
-
-// Custom exception:
+// Custom exception - by extending Exception class
 class InsufficientBalanceException extends Exception {
     public InsufficientBalanceException(String message) {
         super(message);
